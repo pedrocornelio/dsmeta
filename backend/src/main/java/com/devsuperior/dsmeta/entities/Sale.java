@@ -73,19 +73,4 @@ public class Sale {
 		this.date = date;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		long temp;
-		temp = Double.doubleToLongBits(amount);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((date == null) ? 0 : date.hashCode());
-		result = prime * result + ((deals == null) ? 0 : deals.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((sellerName == null) ? 0 : sellerName.hashCode());
-		result = prime * result + ((visited == null) ? 0 : visited.hashCode());
-		return result;
-	}
-
 }
