@@ -88,49 +88,4 @@ public class Sale {
 		return result;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Sale other = (Sale) obj;
-		if (Double.doubleToLongBits(amount) != Double.doubleToLongBits(other.amount))
-			return false;
-		if (date == null) {
-			if (other.date != null)
-				return false;
-		} else if (!date.equals(other.date))
-			return false;
-		if (deals == null) {
-			if (other.deals != null)
-				return false;
-		} else if (!deals.equals(other.deals))
-			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (sellerName == null) {
-			if (other.sellerName != null)
-				return false;
-		} else if (!sellerName.equals(other.sellerName))
-			return false;
-		if (visited == null) {
-			if (other.visited != null)
-				return false;
-		} else if (!visited.equals(other.visited))
-			return false;
-		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "Sale [id=" + id + ", sellerName=" + sellerName + ", visited=" + visited + ", deals=" + deals
-				+ ", amount=" + amount + ", date=" + date + "]";
-	}
-
 }
